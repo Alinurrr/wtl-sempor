@@ -27,6 +27,9 @@ Route::delete('/adm/product/{product:slug}/delete', 'ProductController@destroy')
 //========================== category ==========================
 Route::get('/adm/product/categories/{category:slug}', 'CategoryController@show');
 
+//========================== article ==========================
+Route::get('/adm/article', 'ArticleController@index')->name('article-admin');
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
