@@ -31,7 +31,7 @@ class ProductController extends Controller
 
     public function store()
     {
-        
+
         //validate
         $attr = request()->validate([
             'judul' => 'required',
@@ -61,6 +61,46 @@ class ProductController extends Controller
         return redirect()->to(route('product-admin'));
     }
 
+    public function edit(Product $product)
+    {
+        return view('admin.product.edit', [
+            'product' => $product,
+            'categories' => Category::get(),
+        ]);
+    }
+
+    public function update(Product $product)
+    {
+        // dd('updated');
+        //validate
+        $attr = request()->validate([
+            'judul' => 'required',
+            'category' => 'required',
+            'harga' => 'required|numeric',
+            'desc' => 'required'
+        ]);
+
+        if (request()->file('gambar')) {
+            File::delete($product->gambar);
+            $nama_gambar = request()->file('gambar')->getClientOriginalName() . '-' . time() . '.' . request()->file('gambar')->extension();
+            $destinationPath = 'img-product';
+            $gambar = request()->file('gambar')->move($destinationPath, $nama_gambar);
+        } else {
+            $gambar = $product->gambar;
+        }
+
+
+        $attr['gambar'] = $gambar;
+
+        $attr['category_id'] = request('category');
+
+        //update
+        $product->update($attr);
+
+        Alert::success('Product telah diedit');
+        return redirect()->to(route('product-admin'));
+    }
+
     public function destroy(Product $product)
     {
         // dd($portfolio);
@@ -68,5 +108,10 @@ class ProductController extends Controller
         $product->delete();
         Alert::warning('Produt Berhasil dihapus');
         return redirect()->to(route('product-admin'));
+    }
+
+    public function show(Product $product)
+    {
+        return view('admin.product.show', compact('product'));
     }
 }

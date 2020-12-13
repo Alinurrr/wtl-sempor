@@ -107,7 +107,7 @@
 
 
                         <td>
-                                <a href="/adm/portfolio/{{$product->slug}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
+                                <a href="/adm/product/{{$product->slug}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
                                 <form action="/adm/product/{{$product->slug}}/delete" method="POST" class="d-inline" onsubmit="return confirm('Yakin mau dihapus ?')">
                                     @csrf
                                     @method("delete")

@@ -9,7 +9,8 @@
     <h1>Tambah Product</h1>
     <div class="section-header-breadcrumb">
         <div class="breadcrumb-item"><a href="{{route('product-admin')}}">Product</a></div>
-        <div class="breadcrumb-item active" aria-current="page">Tambah Product</div>
+        <div class="breadcrumb-item" aria-current="page"><a href="/adm/product/{{$product->slug}}">{{$product->judul}}</a></div>
+        <div class="breadcrumb-item active" aria-current="page">Edit</div>
     </div>
     </div>
 
@@ -20,17 +21,18 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>New Product</h4>
+                    <img class="card-img-top mx-auto" src="/{{$product->gambar}}" alt="Sample image" style="width: 500px">
                 </div>
                 <div class="card-body">
-                <form action="{{ route('product-store') }}" method="POST" enctype="multipart/form-data">
+                <form action="/adm/product/{{$product->slug}}/edit" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('patch')
 
                   <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Judul</label>
                     <div class="col-sm-12 col-md-7">
-                      <input type="text" class="form-control" name="judul" value="{{old('judul')}}" autofocus placeholder="Judulnya Apa ?">
-                    @error('judul')
+                      <input type="text" class="form-control" name="judul" value="{{old('judul') ?? $product->judul}}" autofocus placeholder="Judulnya Apa ?">
+                        @error('judul')
                             <div class="mt-2 text-danger">
                             {{$message}}
                             </div>
@@ -72,7 +74,7 @@
                   <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Harga</label>
                     <div class="col-sm-12 col-md-7">
-                      <input type="number" class="form-control" name="harga" value="{{old('harga')}}" placeholder="Tulis harga dalam satuan Rp.">
+                      <input type="number" class="form-control" name="harga" value="{{old('harga') ?? $product->harga}}" placeholder="Tulis harga dalam satuan Rp.">
                     @error('harga')
                             <div class="mt-2 text-danger">
                             {{$message}}
@@ -86,7 +88,7 @@
                   <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Description</label>
                     <div class="col-sm-12 col-md-7">
-                      <textarea id="summernote" class="form-control" name="desc">{{old('desc')}}</textarea>
+                      <textarea id="summernote" class="form-control" name="desc">{{old('desc')?? $product->desc}}</textarea>
                         @error('desc')
                             <div class="mt-2 text-danger">
                             {{$message}}

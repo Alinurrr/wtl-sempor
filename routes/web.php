@@ -21,8 +21,13 @@ Route::get('/adm/product', 'ProductController@index')->name('product-admin');
 // create
 Route::get('/adm/product/create', 'ProductController@create')->name('product-create');
 Route::post('/adm/product/store', 'ProductController@store')->name('product-store');
+// update
+Route::get('/adm/product/{product:slug}/edit', 'ProductController@edit')->name('product-edit');
+Route::patch('/adm/product/{product:slug}/edit', 'ProductController@update')->name('product-update');
 // delete
 Route::delete('/adm/product/{product:slug}/delete', 'ProductController@destroy')->name('product-delete');
+// show
+Route::get('/adm/product/{product:slug}', 'ProductController@show')->name('product-show');
 
 //========================== category ==========================
 Route::get('/adm/product/categories/{category:slug}', 'CategoryController@show');
