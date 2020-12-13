@@ -24,17 +24,19 @@ class ProductController extends Controller
     public function create()
     {
         return view('admin.product.create', [
-            'product' => new Product()
+            'product' => new Product(),
+            'categories' => Category::get(),
         ]);
     }
 
     public function store()
     {
-
+        
         //validate
         $attr = request()->validate([
             'judul' => 'required',
             'gambar' => 'required',
+            'category' => 'required',
             'harga' => 'required|numeric',
             'desc' => 'required'
         ]);
@@ -47,6 +49,8 @@ class ProductController extends Controller
 
         //Assign title to the slug
         $attr['slug'] = \Str::slug(request('judul'));
+
+        $attr['category_id'] = request('category');
 
         $attr['gambar'] = $gambar;
 

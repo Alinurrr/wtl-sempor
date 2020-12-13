@@ -25,7 +25,6 @@
 
         </div>
 
-        @if (!isset($category))
 
         <div class="card mt-4">
             <div class="card-header">
@@ -34,7 +33,7 @@
             <div class="card-body">
               <div class="row">
 
-                <a href="#" class="col mb-4 mb-lg-0 text-center btn">
+                <a href="/adm/product" class="col mb-4 mb-lg-0 text-center btn">
                     <img src="{{ asset('/img/categories/all.svg') }}" alt="">
                     <div class="mt-2 font-weight-bold text-capitalize">all</div>
                 </a>
@@ -51,7 +50,6 @@
             </div>
         </div>
 
-        @endif
 
 
 

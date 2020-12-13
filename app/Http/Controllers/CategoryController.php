@@ -16,6 +16,11 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         $products = $category->products()->latest()->paginate(6);
-        return view('admin.product.index', compact('products', 'category'));
+        $categories = Category::first()->orderBy('name')->paginate(40);
+        return view('admin.product.index', [
+            'products' => $products,
+
+            'categories' => $categories,
+        ]);
     }
 }

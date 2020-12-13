@@ -53,6 +53,23 @@
                   </div>
 
                   <div class="form-group row mb-4">
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Kategori</label>
+                    <div class="col-sm-12 col-md-7">
+                        <select class="form-control selectric" name="category">
+                            <option disabled selected>Pilih Satu Yuk</option>
+                            @foreach ($categories as $category)
+                                <option {{$category->id == $product->category_id ? 'selected' : ''}} value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                        @error('category')
+                            <div class="mt-2 text-danger">
+                            {{$message}}
+                            </div>
+                        @enderror
+                    </div>
+                  </div>
+
+                  <div class="form-group row mb-4">
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Harga</label>
                     <div class="col-sm-12 col-md-7">
                       <input type="number" class="form-control" name="harga" value="{{old('harga')}}" autofocus placeholder="Tulis harga dalam satuan Rp.">
