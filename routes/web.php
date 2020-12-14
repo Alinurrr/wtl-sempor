@@ -32,8 +32,17 @@ Route::get('/adm/product/{product:slug}', 'ProductController@show')->name('produ
 //========================== category ==========================
 Route::get('/adm/product/categories/{category:slug}', 'CategoryController@show');
 
+
+
 //========================== article ==========================
 Route::get('/adm/article', 'ArticleController@index')->name('article-admin');
+// create
+Route::get('/adm/article/create', 'ArticleController@create')->name('article-create');
+Route::post('/adm/article/store', 'ArticleController@store')->name('article-store');
+// delete
+Route::delete('/adm/article/{article:slug}/delete', 'ArticleController@destroy')->name('article-delete');
+// show
+Route::get('/adm/article/{article:slug}', 'ArticleController@show')->name('article-show');
 
 Route::get('/', function () {
     return view('welcome');

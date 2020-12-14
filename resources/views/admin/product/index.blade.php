@@ -14,17 +14,7 @@
 
 
     <div class="section-body">
-        <h2 class="section-title">All Product</h2>
-        <div class="row my-3">
-
-            <div>
-                <p class="section-lead">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima suscipit accusamus temporibus,
-                </p>
-            </div>
-
-        </div>
-
+        <h2 class="section-title">WTL Product</h2>
 
         <div class="card mt-4">
             <div class="card-header">
@@ -101,7 +91,7 @@
                         <td>{{$product->category->name}}</td>
 
 
-                        <td>Rp.{{$product->harga}}</td>
+                        <td>Rp.{{number_format($product->harga)}}</td>
 
                         <td>{{$product->created_at->format("D, d/M/Y")}}</td>
 

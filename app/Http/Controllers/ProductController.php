@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Product;
-use Illuminate\Http\Request;
+use App\Category;
 use Illuminate\Support\Facades\File;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller

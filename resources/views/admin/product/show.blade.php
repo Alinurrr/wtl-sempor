@@ -207,7 +207,7 @@
                             <div class="action">
                                 <a href="#" class="badge badge-warning mr-2 text-capitalize">{{$product->category->name}}</a>&#9900; <span class="text-muted ml-2">{{$product->created_at->format("D, d/M/Y")}}</span>
                             </div>
-                            <h5 class="price mt-4 text-capitalize text-muted ">Harga: <span>Rp.{{$product->harga}}</span></h5>
+                            <h5 class="price mt-4 text-capitalize text-muted ">Harga: <span>Rp.{{number_format($product->harga)}}</span></h5>
                             {{-- <div class="rating">
                                 <div class="stars">
                                     <span class="fa fa-star checked"></span>
@@ -228,5 +228,31 @@
 
     </div>
 </section>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+    <form action="/adm/product/{{$product->slug}}/delete" method="POST">
+        @csrf
+        @method("delete")
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Yakin mau hapus ???</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <h3>{{$product->judul}}</h3>
+        {{-- <p>Published at : {{$product->created_at->format("D, d/M/Y (H:i:s)")}}</p> --}}
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+        </div>
+    </form>
+    </div>
+    </div>
 </div>
 @endsection
