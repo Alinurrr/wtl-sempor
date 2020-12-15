@@ -89,12 +89,12 @@
                     Website WTL
                 </div>
 
-                <div class="links">
+                {{-- <div class="links">
                     <a href="{{ route('dashboard') }}">Halaman Admin</a>
                     <a target="_blank" href="https://laravel.com/docs/7.x#">Docs Lara 7*</a>
                     <a target="_blank" href="https://demo.getstisla.com/index-0.html">Demo Stisla</a>
                     <a target="_blank" href="https://github.com/realrashid/sweet-alert">Sweetalert2</a>
-                </div>
+                </div> --}}
             </div>
         </div>
 
