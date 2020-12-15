@@ -39,6 +39,9 @@ Route::get('/adm/article', 'ArticleController@index')->name('article-admin');
 // create
 Route::get('/adm/article/create', 'ArticleController@create')->name('article-create');
 Route::post('/adm/article/store', 'ArticleController@store')->name('article-store');
+// update
+Route::get('/adm/article/{article:slug}/edit', 'ArticleController@edit')->name('article-edit');
+Route::patch('/adm/article/{article:slug}/edit', 'ArticleController@update')->name('article-update');
 // delete
 Route::delete('/adm/article/{article:slug}/delete', 'ArticleController@destroy')->name('article-delete');
 // show

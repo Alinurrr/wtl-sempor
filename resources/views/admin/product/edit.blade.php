@@ -6,7 +6,7 @@
 <div class="main-content">
 <section class="section">
     <div class="section-header">
-    <h1>Tambah Product</h1>
+    <h1>Edit Product</h1>
     <div class="section-header-breadcrumb">
         <div class="breadcrumb-item"><a href="{{route('product-admin')}}">Product</a></div>
         <div class="breadcrumb-item" aria-current="page"><a href="/adm/product/{{$product->slug}}">{{$product->judul}}</a></div>

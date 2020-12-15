@@ -53,6 +53,46 @@ class ArticleController extends Controller
         Alert::success('Article telah ditambahkan');
         return redirect()->to(route('article-admin'));
     }
+
+    public function edit(Article $article)
+    {
+        return view('admin.article.edit', [
+            'article' => $article,
+            'article_categories' => ArticleCategory::get(),
+        ]);
+    }
+
+    public function update(Article $article)
+    {
+        // dd('updated');
+        //validate
+        $attr = request()->validate([
+            'title' => 'required',
+            'category' => 'required',
+            'body' => 'required'
+        ]);
+
+        if (request()->file('thumbnail')) {
+            \File::delete($article->thumbnail);
+            $nama_gambar = request()->file('thumbnail')->getClientOriginalName() . '-' . time() . '.' . request()->file('thumbnail')->extension();
+            $destinationPath = 'img-article';
+            $gambar = request()->file('thumbnail')->move($destinationPath, $nama_gambar);
+        } else {
+            $gambar = $article->thumbnail;
+        }
+
+
+        $attr['thumbnail'] = $gambar;
+
+        $attr['article_category_id'] = request('category');
+
+        //update
+        $article->update($attr);
+
+        Alert::success('Article telah diedit');
+        return redirect()->to(route('article-admin'));
+    }
+
     public function destroy(Article $article)
     {
         // dd($article);
