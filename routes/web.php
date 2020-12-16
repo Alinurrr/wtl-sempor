@@ -35,6 +35,11 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     Route::get('/adm/product/categories/{category:slug}', 'CategoryController@show');
 
 
+    //========================== Auth ==========================
+
+    Route::get('/adm/user', 'UserController@index')->name('user-admin');
+
+
     //========================== article ==========================
     Route::get('/adm/article', 'ArticleController@index')->name('article-admin');
     // create
@@ -52,7 +57,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 
 Route::get('/', function () {
     return view('welcome');
-})->name('home');
+})->name('welcome');
 
 Auth::routes();
 
