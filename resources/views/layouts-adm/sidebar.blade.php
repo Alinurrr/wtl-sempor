@@ -7,6 +7,10 @@
         <a href="index.html">WTL</a>
       </div>
       <ul class="sidebar-menu">
+          @if (auth()->user()->level=="master")
+          <li class="menu-header">Master Admin WTL</li>
+          <li ><a class="nav-link" href="{{route('dashboard')}}"><i class="fas fa-paper-plane"></i> <span>Master</span></a></li>
+          @endif
 
           <li class="menu-header">Admin WTL</li>
           <li class="{{request()->is('adm') ? 'active' : ''}}"><a class="nav-link" href="{{route('dashboard')}}"><i class="fas fa-paper-plane"></i> <span>Dashboard</span></a></li>
