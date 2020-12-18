@@ -38,7 +38,11 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     //========================== Auth ==========================
 
     Route::get('/adm/user', 'UserController@index')->name('user-admin');
-
+    // update level
+    Route::get('/adm/user/{user:id}/editlevel', 'UserController@editlevel')->name('user-editlevel');
+    Route::patch('/adm/user/{user:id}/editlevel', 'UserController@updatelevel')->name('user-updatelevel');
+    //show
+    Route::get('/adm/user/{user:id}', 'UserController@show')->name('user-show');
 
     //========================== article ==========================
     Route::get('/adm/article', 'ArticleController@index')->name('article-admin');

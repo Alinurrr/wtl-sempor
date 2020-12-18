@@ -61,7 +61,7 @@
 
 
                         <td>
-                                <a href="/adm/product/{{$user->id}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
+                            <a href="/adm/user/{{$user->id}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
                                 {{-- <form action="/adm/product/{{$product->slug}}/delete" method="POST" class="d-inline" onsubmit="return confirm('Yakin mau dihapus ?')">
                                     @csrf
                                     @method("delete")
@@ -129,7 +129,7 @@
 
 
                         <td>
-                                <a href="/adm/product/{{$user->id}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
+                                <a href="/adm/user/{{$user->id}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
                                 {{-- <form action="/adm/product/{{$product->slug}}/delete" method="POST" class="d-inline" onsubmit="return confirm('Yakin mau dihapus ?')">
                                     @csrf
                                     @method("delete")
@@ -196,7 +196,7 @@
 
 
                         <td>
-                                <a href="/adm/product/{{$user->id}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
+                            <a href="{{route('user-show', $user->id)}}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
                                 {{-- <form action="/adm/product/{{$product->slug}}/delete" method="POST" class="d-inline" onsubmit="return confirm('Yakin mau dihapus ?')">
                                     @csrf
                                     @method("delete")

@@ -14,7 +14,7 @@
 
           <li class="menu-header">Admin WTL</li>
           <li class="{{request()->is('adm') ? 'active' : ''}}"><a class="nav-link" href="{{route('dashboard')}}"><i class="fas fa-paper-plane"></i> <span>Dashboard</span></a></li>
-          <li class="{{request()->is('adm/user') ? 'active' : ''}}"><a class="nav-link" href="{{route('user-admin')}}"><i class="far fa-user"></i> <span>Auth</span></a></li>
+          <li class="{{request()->is('adm/user*') ? 'active' : ''}}"><a class="nav-link" href="{{route('user-admin')}}"><i class="far fa-user"></i> <span>Auth</span></a></li>
           <li class="{{request()->is('adm/product*') ? 'active' : ''}}"><a class="nav-link" href="{{route('product-admin')}}"><i class="fas fa-swatchbook"></i> <span>Produk</span></a></li>
           <li class="{{request()->is('adm/article*') ? 'active' : ''}}"><a class="nav-link" href="{{route('article-admin')}}"><i class="far fa-file-alt"></i> <span>Artikel</span></a></li>
           {{-- <li class="{{request()->is('adm/contact') ? 'active' : ''}}"><a class="nav-link" href="{{route('contact-index')}}"><i class="far fa-envelope"></i> <span>Pesan</span></a></li> --}}
