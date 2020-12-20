@@ -195,19 +195,31 @@
 
                         </div>
                         <div class="details col-md-6">
-                            <div class="row my-3">
+                            <div class="row my-1 ml-1">
                                 <h3 class="product-title">{{$product->judul}}</h3>
+                            </div>
+
+                            <div class="action">
+                                <a href="#" class="badge badge-warning mr-2 text-capitalize">{{$product->category->name}}</a>
+                                &#9900; <span class="text-muted ml-2">{{$product->created_at->format("D, d/M/Y")}}</span>
+                            </div>
+
+                            <div class="action mt-2">
+                                <span class="text-muted ml-2">Diunggah oleh {{$product->author->name}}</span>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="mr-auto">
+                                    <h5 class="price ml-3 text-capitalize text-muted ">Harga: <span>Rp.{{number_format($product->harga)}}</span></h5>
+                                </div>
+                                @if (auth()->user()->id == $product->user_id)
                                 <div class="ml-auto">
                                     <a href="/adm/product/{{$product->slug}}/edit"  class="btn btn-icon icon-left btn-primary btn-sm"><i class="far fa-edit"></i> Edit</a>
                                     <button type="button" class="btn btn-icon icon-left btn-danger  btn-sm" data-toggle="modal" data-target="#exampleModal">
                                         <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </div>
+                                @endif
                             </div>
-                            <div class="action">
-                                <a href="#" class="badge badge-warning mr-2 text-capitalize">{{$product->category->name}}</a>&#9900; <span class="text-muted ml-2">{{$product->created_at->format("D, d/M/Y")}}</span>
-                            </div>
-                            <h5 class="price mt-4 text-capitalize text-muted ">Harga: <span>Rp.{{number_format($product->harga)}}</span></h5>
                             {{-- <div class="rating">
                                 <div class="stars">
                                     <span class="fa fa-star checked"></span>
@@ -219,6 +231,7 @@
                                 <span class="review-no">41 reviews</span>
                             </div> --}}
                             <p class="product-description pt-2">{!!$product->desc!!}</p>
+
 
                         </div>
                     </div>

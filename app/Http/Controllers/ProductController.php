@@ -31,6 +31,7 @@ class ProductController extends Controller
 
     public function store()
     {
+        // dd(auth()->user());
 
         //validate
         $attr = request()->validate([
@@ -55,7 +56,8 @@ class ProductController extends Controller
         $attr['gambar'] = $gambar;
 
         // create new
-        Product::create($attr);
+        // $post =  auth()->user()->posts()->create($attr);
+        auth()->user()->products()->create($attr);
 
         Alert::success('Product telah ditambahkan');
         return redirect()->to(route('product-admin'));
