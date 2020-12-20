@@ -49,8 +49,12 @@
                                 @if ($user->gender == "L")
                                 <p>Laki - Laki</p>
 
-                                @else
+                                @elseif ($user->gender == "P")
                                 <p>Perempuan</p>
+
+                                @else
+                                <p>Lainnya</p>
+
 
                                 @endif
                           </div>
@@ -67,9 +71,11 @@
                         </div>
 
                     </div>
-                    <div class="card-footer text-right">
-                      <button class="btn btn-primary">Edit Profile</button>
-                    </div>
+                    @if (Auth::user()->id == ($user->id))
+                        <div class="card-footer text-right">
+                            <a href="{{ route('user-edit', $user->id) }}" class="btn btn-primary">Edit Profile</a>
+                        </div>
+                    @endif
                   </form>
               </div>
 

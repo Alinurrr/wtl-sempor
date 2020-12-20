@@ -6,12 +6,11 @@
 <div class="main-content">
 <section class="section">
     <div class="section-header">
-    <h1>List Product</h1>
-    <div class="section-header-breadcrumb">
-        <div class="breadcrumb-item"><a href="{{route('product-admin')}}">Product</a></div>
+        <h1>List Product</h1>
+        <div class="section-header-breadcrumb">
+            <div class="breadcrumb-item"><a href="{{route('product-admin')}}">Product</a></div>
+        </div>
     </div>
-    </div>
-
 
     <div class="section-body">
         <h2 class="section-title">WTL Product</h2>

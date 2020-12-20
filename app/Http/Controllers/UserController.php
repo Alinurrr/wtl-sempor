@@ -20,17 +20,12 @@ class UserController extends Controller
         ]);
     }
 
+    // edit level
     public function editlevel(User $user)
     {
         return view('admin.user.editlevel', [
             'user' => $user,
         ]);
-    }
-
-
-    public function show(User $user)
-    {
-        return view('admin.user.show', compact('user'));
     }
 
     public function updatelevel(User $user)
@@ -47,5 +42,38 @@ class UserController extends Controller
         Alert::success('Level user telah diedit');
         return redirect()->route('user-show', $user->id);
         // return redirect()->to(route('product-admin'));
+    }
+
+    // edit profile
+    public function edit(User $user)
+    {
+        return view('admin.user.edit', [
+            'user' => $user,
+        ]);
+    }
+
+    public function update(User $user)
+    {
+        $attr = request()->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'no_hp' => 'required|numeric',
+            'gender' => '',
+            'tanggal_lahir' => '',
+        ]);
+
+        // dd($attr);
+
+        //update
+        $user->update($attr);
+
+        Alert::success('Profile user telah diedit');
+        return redirect()->route('user-show', $user->id);
+        // return redirect()->to(route('product-admin'));
+    }
+
+    public function show(User $user)
+    {
+        return view('admin.user.show', compact('user'));
     }
 }
