@@ -11,6 +11,12 @@
 
     <div class="section-body">
         <h2 class="section-title">WTL User</h2>
+        <form class="form-group" action="{{ route('search-user') }}" method="GET">
+            <div class="col-6 input-group mb-3">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" name="query" value="{{old('query')}}">
+                <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
 
 
         {{-- master --}}
