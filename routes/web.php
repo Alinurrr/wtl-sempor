@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     // show
     Route::get('/adm/product/{product:slug}', 'ProductController@show')->name('product-show');
 
+
     //========================== category ==========================
     Route::get('/adm/product/categories/{category:slug}', 'CategoryController@show');
 
@@ -47,8 +48,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     //show
     Route::get('/adm/user/{user:id}', 'UserController@show')->name('user-show');
 
-    // searching
-    Route::get('search', 'SearchController@user')->name('search-user');
 
 
     //========================== article ==========================
@@ -63,6 +62,13 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     Route::delete('/adm/article/{article:slug}/delete', 'ArticleController@destroy')->name('article-delete');
     // show
     Route::get('/adm/article/{article:slug}', 'ArticleController@show')->name('article-show');
+
+    //========================== searching ==========================
+
+    // product
+    Route::get('adm/product/search/product', 'SearchController@product')->name('search-product');
+    // user
+    Route::get('adm/user/search/user', 'SearchController@user')->name('search-user');
 });
 
 

@@ -15,6 +15,13 @@
     <div class="section-body">
         <h2 class="section-title">WTL Product</h2>
 
+        <form class="form-group" action="{{ route('search-product') }}" method="GET">
+            <div class="col-6 input-group mb-3">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" name="query" value="{{old('query')}}">
+                <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
         <div class="card mt-4">
             <div class="card-header">
               <h4>Kategori</h4>
@@ -47,7 +54,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h4>My Product</h4>
+                <h4>WTL Product</h4>
                 <div class="ml-auto mr-3">
                     <a href="{{route('product-create')}}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah</a>
                 </div>
