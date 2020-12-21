@@ -42,6 +42,11 @@ class User extends Authenticatable
         return $this->hasMany(Product::class);
     }
 
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
     public function isAdmin()
     {
         return $this->level == "master";

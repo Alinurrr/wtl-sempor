@@ -23,7 +23,9 @@
                       <div class="form-group ml-3 col-md-8 col-12">
                         <label>Role</label>
                         <select name="level" class="form-control">
-                          <option value="master" {{$user->level == 'master' ? 'selected' : ''}}>Master</option>
+                        @if (auth()->user()->level=="master")
+                        <option value="master" {{$user->level == 'master' ? 'selected' : ''}}>Master</option>
+                        @endif
                           <option value="admin" {{$user->level == 'admin' ? 'selected' : ''}}>Admin</option>
                           <option value="user" {{$user->level == 'user' ? 'selected' : ''}}>User</option>
                         </select>

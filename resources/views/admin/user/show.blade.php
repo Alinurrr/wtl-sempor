@@ -42,19 +42,26 @@
                         <div class="row">
                             <div class="form-group col-md-7 col-12">
                                 <label>Tanggal Lahir</label>
-                                <p>{{ date('d F Y', strtotime($user->tanggal_lahir)) }}</p>
+                                @if ($user->gender == null)
+                                    <p class="text-secondary">Belum Menambhakan Tanggal Lahir</p>
+                                @else
+                                    <p>{{ date('d F Y', strtotime($user->tanggal_lahir)) }}</p>
+                                @endif
                             </div>
+
                             <div class="form-group col-md-5 col-12">
                                 <label>Jenis Kelamin</label>
                                 @if ($user->gender == "L")
-                                <p>Laki - Laki</p>
+                                    <p>Laki - Laki</p>
 
                                 @elseif ($user->gender == "P")
-                                <p>Perempuan</p>
+                                    <p>Perempuan</p>
+
+                                @elseif ($user->gender == "o")
+                                    <p>Lainnya</p>
 
                                 @else
-                                <p>Lainnya</p>
-
+                                    <p class="text-secondary">Belum Menambhakan Jenis Kelamin</p>
 
                                 @endif
                           </div>
@@ -66,7 +73,11 @@
                             </div>
                             <div class="form-group col-md-5 col-12">
                                 <label>Phone</label>
-                                <p>{{$user->no_hp}}</p>
+                                @if ($user->no_hp == null)
+                                    <p class="text-secondary">Belum Menambhakan Nomor Telephon</p>
+                                @else
+                                    <p>{{$user->no_hp}}</p>
+                                @endif
                           </div>
                         </div>
 

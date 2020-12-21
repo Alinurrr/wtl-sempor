@@ -17,6 +17,8 @@
 
         <h2 class="section-title">{{$article->title}}</h2>
 
+        @can('update', $article)
+
         <div class="row my-3">
             <div class="ml-3">
                 <a href="/adm/article/{{$article->slug}}/edit"  class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Edit</a>
@@ -25,6 +27,7 @@
                 </button>
             </div>
         </div>
+        @endcan
 
         <!--Section: Content-->
         <section class="mx-md-5 dark-grey-text">

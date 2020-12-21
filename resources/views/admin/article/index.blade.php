@@ -17,7 +17,7 @@
         <div class="row">
             @foreach ($articles as $article)
 
-            <div class="col-12 col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4 my-2">
               <article class="article article-style-c h-100">
                 <div class="article-header">
                   <img src="/{{$article->thumbnail}}" alt="" style="height: 270px; object-fit: cover; object-position: center;" class="d-flex align-items-center">
@@ -34,7 +34,7 @@
                     <img alt="image" src="{{asset('stisla/img/avatar/avatar-1.png')}}">
                     <div class="article-user-details">
                       <div class="user-detail-name">
-                        <a href="#">Hasan Basri</a>
+                        <a href="{{route('user-show', $article->author->id)}}">{{$article->author->name}}</a>
                       </div>
                       <div class="text-job">Web Developer</div>
                     </div>

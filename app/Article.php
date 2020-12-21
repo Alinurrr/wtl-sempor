@@ -14,4 +14,9 @@ class Article extends Model
     {
         return $this->belongsTo(ArticleCategory::class);
     }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

@@ -48,7 +48,8 @@ class ArticleController extends Controller
         $attr['thumbnail'] = $gambar;
 
         // create new
-        Article::create($attr);
+        // Article::create($attr);
+        auth()->user()->articles()->create($attr);
 
         Alert::success('Article telah ditambahkan');
         return redirect()->to(route('article-admin'));
@@ -56,6 +57,8 @@ class ArticleController extends Controller
 
     public function edit(Article $article)
     {
+        //cek siapa yang login
+        $this->authorize('update', $article);
         return view('admin.article.edit', [
             'article' => $article,
             'article_categories' => ArticleCategory::get(),
@@ -64,6 +67,8 @@ class ArticleController extends Controller
 
     public function update(Article $article)
     {
+        //cek siapa yang login
+        $this->authorize('update', $article);
         // dd('updated');
         //validate
         $attr = request()->validate([
@@ -95,6 +100,8 @@ class ArticleController extends Controller
 
     public function destroy(Article $article)
     {
+        //cek siapa yang login
+        $this->authorize('update', $article);
         // dd($article);
         \File::delete($article->thumbnail);
         $article->delete();
