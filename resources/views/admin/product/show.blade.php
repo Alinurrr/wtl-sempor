@@ -211,14 +211,15 @@
                                 <div class="mr-auto">
                                     <h5 class="price ml-3 text-capitalize text-muted ">Harga: <span>Rp.{{number_format($product->harga)}}</span></h5>
                                 </div>
-                                @if (auth()->user()->id == $product->user_id)
+                                {{-- @if (auth()->user()->id == $product->user_id) --}}
+                                @can('update', $product)
                                 <div class="ml-auto">
                                     <a href="/adm/product/{{$product->slug}}/edit"  class="btn btn-icon icon-left btn-primary btn-sm"><i class="far fa-edit"></i> Edit</a>
                                     <button type="button" class="btn btn-icon icon-left btn-danger  btn-sm" data-toggle="modal" data-target="#exampleModal">
                                         <i class="fas fa-trash-alt"></i> Delete
                                     </button>
                                 </div>
-                                @endif
+                                @endcan
                             </div>
                             {{-- <div class="rating">
                                 <div class="stars">

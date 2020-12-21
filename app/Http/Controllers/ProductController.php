@@ -65,6 +65,8 @@ class ProductController extends Controller
 
     public function edit(Product $product)
     {
+        //cek siapa yang login
+        $this->authorize('update', $product);
         return view('admin.product.edit', [
             'product' => $product,
             'categories' => Category::get(),
@@ -74,6 +76,10 @@ class ProductController extends Controller
     public function update(Product $product)
     {
         // dd('updated');
+
+        //cek siapa yang login
+        $this->authorize('update', $product);
+
         //validate
         $attr = request()->validate([
             'judul' => 'required',
@@ -105,6 +111,7 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
+        $this->authorize('update', $product);
         // dd($portfolio);
         File::delete($product->gambar);
         $product->delete();
