@@ -10,6 +10,8 @@ class Article extends Model
 
     protected $fillable = ['title', 'slug', 'body', 'thumbnail', 'article_category_id'];
 
+    protected $with = ['article_category', 'author'];
+
     public function article_category()
     {
         return $this->belongsTo(ArticleCategory::class);
