@@ -10,10 +10,20 @@
     </div>
 
     <div class="section-body">
-        <h2 class="section-title">Article WTL</h2>
-        <div class="ml-auto mr-3 mb-3">
-            <a href="{{ route('article-create') }}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah Artikel</a>
+        <div class="row mr-3 mb-3">
+            <h2 class="section-title">Article WTL</h2>
+            <div class="ml-auto" style="margin: 20px 0 25px 0;">
+                <a href="{{ route('article-create') }}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah Artikel</a>
+            </div>
         </div>
+
+        <form class="form-group" action="{{ route('search-article') }}" method="GET">
+            <div class="col-6 input-group mb-3">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" name="query" value="{{old('query')}}">
+                <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+
         <div class="row">
             @foreach ($articles as $article)
 

@@ -65,10 +65,12 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 
     //========================== searching ==========================
 
+    // user
+    Route::get('adm/user/search/user', 'SearchController@user')->name('search-user');
     // product
     Route::get('adm/product/search/product', 'SearchController@product')->name('search-product');
     // user
-    Route::get('adm/user/search/user', 'SearchController@user')->name('search-user');
+    Route::get('adm/article/search/article', 'SearchController@article')->name('search-article');
 });
 
 

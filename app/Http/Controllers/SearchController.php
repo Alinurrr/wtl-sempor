@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Category;
 use App\Product;
 use App\User;
@@ -35,5 +36,13 @@ class SearchController extends Controller
             'products' => $products,
             'categories' => $categories,
         ]);
+    }
+
+    public function article()
+    {
+        $query = request('query');
+
+        $articles = Article::where("title", "like", "%$query%")->latest()->paginate(5);
+        return view('admin.article.index', ['articles' => $articles]);
     }
 }
