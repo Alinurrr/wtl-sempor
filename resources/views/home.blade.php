@@ -297,9 +297,9 @@
             @foreach ($products as $product)
 
             <!-- Grid column -->
-            <div class="col-lg-3 col-md-12 mb-4">
+            <div class="col-lg-3  col-md-12 mb-4">
             <!-- Card -->
-            <div class="card card-cascade wider card-ecommerce">
+            <div class="card  card-cascade wider card-ecommerce">
                 <!-- Card image -->
                 <div class="view view-cascade overlay">
                 <img src="/{{$product->gambar}}"
@@ -311,17 +311,17 @@
                 <!-- Card image -->
                 <!-- Card content -->
                 <div class="card-body card-body-cascade text-center pb-0">
+                <!-- Description -->
+                <span class="badge badge-info">{{$product->category->name}}</span>
                 <!-- Title -->
-                <h5 class="card-title">
+                <h5 class="card-title mt-3">
                     <strong>
-                    <a href="">GoPro</a>
+                    <a href="">{{$product->judul}}</a>
                     </strong>
                 </h5>
-                <!-- Description -->
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit.</p>
                 <!-- Card footer -->
                 <div class="card-footer mt-4">
-                    <p class="float-left font-weight-bold mb-1 pb-2">1439$</p>
+                    <p class="float-left font-weight-bold mb-1 pb-2">Rp. {{$product->harga}}</p>
                     <a class="float-right material-tooltip-main" data-toggle="tooltip" data-placement="top"
                     title="Add to Wishlist">
                     <i class="fas fa-heart grey-text ml-3"></i>
