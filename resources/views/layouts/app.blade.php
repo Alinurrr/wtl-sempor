@@ -117,21 +117,14 @@
       text-align: center;
     } */
   </style>
+
+  @yield('css-after')
 </head>
 
 <body>
     <!-- Start your project here-->
     <!--Main Navigation-->
-    <header>
-
-
-
-    @include('layouts.nav')
-
-    @yield('carousel')
-
-
-  </header>
+  <livewire:navbar/>
   <!--Main Navigation-->
 
 
@@ -183,7 +176,8 @@
   <!-- End your project here-->
 
   <!-- jQuery -->
-  <script type="text/javascript" src="{{ asset('fe-wtl/js/jquery.min.js') }}"></script>
+  {{-- saya disable karena mengganggu livewire --}}
+  {{-- <script type="text/javascript" src="{{ asset('fe-wtl/js/jquery.min.js') }}"></script> --}}
   <!-- Bootstrap tooltips -->
   <script type="text/javascript" src="{{ asset('fe-wtl/js/popper.min.js') }}"></script>
   <!-- Bootstrap core JavaScript -->

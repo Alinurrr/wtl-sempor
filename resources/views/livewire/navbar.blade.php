@@ -1,3 +1,4 @@
+<div>
 <!-- Navbar -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
     <div class="container">
@@ -53,7 +54,6 @@
             @else
 
 
-
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         <i class="fas fa-user"></i>  {{ Auth::user()->name }}
@@ -83,3 +83,5 @@
     </div>
 </nav>
 <!-- Navbar -->
+
+</div>

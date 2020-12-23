@@ -19,7 +19,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 
     Route::get('/adm', 'DashboardController@index')->name('dashboard');
 
-    
+
     //========================== product ==========================
     Route::get('/adm/product', 'ProductController@index')->name('product-admin');
     // create
@@ -80,4 +80,3 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/home', 'HomeController@index')->name('home');

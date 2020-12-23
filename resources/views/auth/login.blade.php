@@ -79,8 +79,8 @@
   <title>Material Design for Bootstrap</title>
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- WTL icon -->
+  <link rel="icon" href="{{ asset('fe-wtl/img/wtl-favicon.ico') }}" type="image/x-icon">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <!-- Google Fonts Roboto -->

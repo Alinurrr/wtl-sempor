@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('carousel')
+@section('content')
+<header>
     <!--Carousel Wrapper-->
     <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
@@ -243,9 +244,7 @@
 
     </div>
     <!--/.Carousel Wrapper-->
-@endsection
-
-@section('content')
+</header>
     {{-- <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
