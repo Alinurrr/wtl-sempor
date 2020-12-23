@@ -80,7 +80,28 @@
                         @enderror
                     </div>
                   </div>
-
+                  <div class="form-group row mb-4">
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Rekomendasi</label>
+                    <div class="col-sm-12 col-md-7">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rekomendasi" value="1" id="rekomendasi1" >
+                            <label class="form-check-label" for="rekomendasi1">
+                              Ya
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rekomendasi" value="0" id="rekomendasi2" checked="">
+                            <label class="form-check-label" for="rekomendasi2">
+                              Tidak
+                            </label>
+                          </div>
+                        @error('harga')
+                            <div class="mt-2 text-danger">
+                            {{$message}}
+                            </div>
+                        @enderror
+                    </div>
+                  </div>
 
 
                   <div class="form-group row mb-4">

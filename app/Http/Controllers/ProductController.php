@@ -39,9 +39,11 @@ class ProductController extends Controller
             'gambar' => 'required',
             'category' => 'required',
             'harga' => 'required|numeric',
+            'rekomendasi' => 'required',
             'desc' => 'required'
         ]);
 
+        // dd($attr);
         // input gambar
 
         $nama_gambar = request()->file('gambar')->getClientOriginalName() . '-' . time() . '.' . request()->file('gambar')->extension();

@@ -292,7 +292,7 @@
             quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
 
         <!-- Grid row -->
-        <div class="row">
+        <div class="row justify-content-center">
 
             @foreach ($products as $product)
 
