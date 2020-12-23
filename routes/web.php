@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 
     Route::get('/adm', 'DashboardController@index')->name('dashboard');
+
+    
     //========================== product ==========================
     Route::get('/adm/product', 'ProductController@index')->name('product-admin');
     // create

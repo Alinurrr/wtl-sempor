@@ -16,9 +16,9 @@ class SearchController extends Controller
 
         // $posts = User::where("name", "like", "%$query%")->latest()->paginate(10);
 
-        $master = User::where("name", "like", "%$query%")->latest()->paginate(40)->where('level', "master");
-        $admin = User::where("name", "like", "%$query%")->latest()->paginate(40)->where('level', "admin");
-        $all_users = User::where("name", "like", "%$query%")->latest()->paginate(40)->where('level', "user");
+        $master = User::where("name", "like", "%$query%")->latest()->paginate(12)->where('level', "master");
+        $admin = User::where("name", "like", "%$query%")->latest()->paginate(12)->where('level', "admin");
+        $all_users = User::where("name", "like", "%$query%")->latest()->paginate(12)->where('level', "user");
         return view('admin.user.index', [
             'master_users' => $master,
             'admin_users' => $admin,
@@ -30,8 +30,8 @@ class SearchController extends Controller
     {
         $query = request('query');
 
-        $products = Product::where("judul", "like", "%$query%")->latest()->paginate(40);
-        $categories = Category::first()->orderBy('name')->paginate(40);
+        $products = Product::where("judul", "like", "%$query%")->latest()->paginate(12);
+        $categories = Category::first()->orderBy('name')->paginate(12);
         return view('admin.product.index', [
             'products' => $products,
             'categories' => $categories,

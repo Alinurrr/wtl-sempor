@@ -71,6 +71,7 @@
                         <th>Judul</th>
                         <th>Kategori</th>
                         <th>Harga</th>
+                        <th>Rekomendasi</th>
                         <th>Waktu Upload</th>
                         <th>Action</th>
                       </tr>
@@ -98,6 +99,13 @@
 
 
                         <td>Rp.{{number_format($product->harga)}}</td>
+                        <td>
+                            @if ($product->rekomendasi == 1 )
+                            <span class="badge badge-primary">OK</span>
+                            @else
+                            <span class="badge badge-warning">NO</span>
+                            @endif
+                        </td>
 
                         <td>{{$product->created_at->format("D, d/M/Y")}}</td>
 
