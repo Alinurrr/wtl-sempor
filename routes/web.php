@@ -80,3 +80,5 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 Auth::routes();
 
 Route::livewire('/', 'home')->name('home');
+
+Route::livewire('/product/{id}/{slug}', 'product-detail')->name('product.detail');

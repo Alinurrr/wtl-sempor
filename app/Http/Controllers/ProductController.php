@@ -109,7 +109,8 @@ class ProductController extends Controller
         $product->update($attr);
 
         Alert::success('Product telah diedit');
-        return redirect()->to(route('product-admin'));
+
+        return redirect()->route('product-show', $product->slug);
     }
 
     public function destroy(Product $product)

@@ -294,7 +294,7 @@
                 @foreach ($products as $product)
 
                 <!-- Grid column -->
-                <div class="col-lg-3  col-md-12 mb-4">
+                <div class="col-lg-3 col-sm-6 col-md-4 mb-4">
                 <!-- Card -->
                 <div class="card  card-cascade wider card-ecommerce">
                     <!-- Card image -->
@@ -313,7 +313,7 @@
                     <!-- Title -->
                     <h5 class="card-title mt-3">
                         <strong>
-                        <a href="">{{$product->judul}}</a>
+                        <a href="{{route('product.detail', [$product->id,$product->slug])}}">{{$product->judul}}</a>
                         </strong>
                     </h5>
                     <!-- Card footer -->
