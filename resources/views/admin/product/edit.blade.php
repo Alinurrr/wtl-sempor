@@ -75,11 +75,28 @@
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Harga</label>
                     <div class="col-sm-12 col-md-7">
                       <input type="number" class="form-control" name="harga" value="{{old('harga') ?? $product->harga}}" placeholder="Tulis harga dalam satuan Rp.">
-                    @error('harga')
+                        @error('harga')
                             <div class="mt-2 text-danger">
                             {{$message}}
                             </div>
                         @enderror
+                    </div>
+                  </div>
+                  <div class="form-group row mb-4">
+                    <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Rekomendasi</label>
+                    <div class="col-sm-12 col-md-7">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rekomendasi" value="1" id="rekomendasi1" {{$product->rekomendasi == 1 ? 'checked' : ''}} >
+                            <label class="form-check-label" for="rekomendasi1">
+                              Ya
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="rekomendasi" value="0" id="rekomendasi2" {{$product->rekomendasi == 0 ? 'checked' : ''}} >
+                            <label class="form-check-label" for="rekomendasi2">
+                              Tidak
+                            </label>
+                          </div>
                     </div>
                   </div>
 

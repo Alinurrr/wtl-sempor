@@ -87,6 +87,7 @@ class ProductController extends Controller
             'judul' => 'required',
             'category' => 'required',
             'harga' => 'required|numeric',
+            'rekomendasi' => 'required',
             'desc' => 'required'
         ]);
 

@@ -73,7 +73,7 @@
                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Harga</label>
                     <div class="col-sm-12 col-md-7">
                       <input type="number" class="form-control" name="harga" value="{{old('harga')}}" placeholder="Tulis harga dalam satuan Rp.">
-                    @error('harga')
+                        @error('harga')
                             <div class="mt-2 text-danger">
                             {{$message}}
                             </div>
@@ -95,11 +95,6 @@
                               Tidak
                             </label>
                           </div>
-                        @error('harga')
-                            <div class="mt-2 text-danger">
-                            {{$message}}
-                            </div>
-                        @enderror
                     </div>
                   </div>
 
