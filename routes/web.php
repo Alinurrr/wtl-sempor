@@ -79,4 +79,4 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::livewire('/', 'home')->name('home');

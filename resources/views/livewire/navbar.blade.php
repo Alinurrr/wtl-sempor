@@ -4,7 +4,7 @@
     <div class="container">
 
         <!-- Brand -->
-        <a class="navbar-brand text-warning" href="/">
+        <a class="navbar-brand text-warning" href="{{ route('home') }}">
         <strong>Wahana Tirta Lestari </strong>
         </a>
 
@@ -20,17 +20,17 @@
         <!-- Left -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-            <a class="nav-link active" href="/">Home
+            <a class="nav-link {{request()->is('/') ? 'active' : ''}}" href="{{ route('home') }}">Home
             </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#"">About</a>
+            <a class="nav-link {{request()->is('about*') ? 'active' : ''}}" href="#"">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#"">Produk</a>
+            <a class="nav-link {{request()->is('product*') ? 'active' : ''}}" href="#"">Produk</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#"">Berita</a>
+            <a class="nav-link {{request()->is('berita*') ? 'active' : ''}}" href="#"">Berita</a>
             </li>
         </ul>
 

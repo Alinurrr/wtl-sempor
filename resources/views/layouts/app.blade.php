@@ -24,7 +24,7 @@
 
   <!-- livewire -->
    <!-- Scripts -->
-   <script src="{{ mix('js/app.js') }}" defer></script>
+   <script src="{{ mix('js/app.js') }}" ></script>
 
   <livewire:styles/>
   <livewire:scripts/>
@@ -54,7 +54,7 @@
     }
 
     .navbar {
-      background-color: rgba(0, 0, 0, .2);
+      background-color: rgba(0, 0, 0, .5);
     }
 
     .navbar .navbar-nav .nav-item .nav-link:hover,
@@ -107,15 +107,6 @@
       }
     }
 
-    /* footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-color: red;
-      color: white;
-      text-align: center;
-    } */
   </style>
 
   @yield('css-after')
