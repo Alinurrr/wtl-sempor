@@ -93,6 +93,13 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="{{ asset('fe-wtl/css/style.css') }}">
 
+  <!-- livewire -->
+  <livewire:styles/>
+  <livewire:scripts/>
+   <!-- Scripts -->
+   <script src="{{ mix('js/app.js') }}" defer></script>
+
+
 
   <style type="text/css">
     .view,

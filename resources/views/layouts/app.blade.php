@@ -22,6 +22,14 @@
   <link rel="stylesheet" href="{{ asset('fe-wtl/css/style.css') }}">
 
 
+  <!-- livewire -->
+   <!-- Scripts -->
+   <script src="{{ mix('js/app.js') }}" defer></script>
+
+  <livewire:styles/>
+  <livewire:scripts/>
+
+
   <style type="text/css">
     .view,
     body,
