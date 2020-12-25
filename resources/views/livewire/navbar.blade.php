@@ -24,13 +24,13 @@
             </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link {{request()->is('about*') ? 'active' : ''}}" href="#"">About</a>
+            <a class="nav-link {{request()->is('about*') ? 'active' : ''}}" href="#">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link {{request()->is('product*') ? 'active' : ''}}" href="#"">Produk</a>
+            <a class="nav-link {{request()->is('product*') ? 'active' : ''}}" href="{{ route('product') }}">Produk</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link {{request()->is('berita*') ? 'active' : ''}}" href="#"">Berita</a>
+            <a class="nav-link {{request()->is('berita*') ? 'active' : ''}}" href="#">Berita</a>
             </li>
         </ul>
 
