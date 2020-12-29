@@ -12,6 +12,7 @@ Route::livewire('/product', 'product-index')->name('product');
 Route::livewire('/product/{id}/{slug}', 'product-detail')->name('product.detail');
 Route::livewire('/products/category/{categoryId}/{slug}', 'product-category')->name('products.category');
 Route::livewire('/keranjang', 'keranjang')->name('keranjang');
+Route::livewire('/checkout', 'checkout')->name('checkout');
 
 // Route::get('/contact', function () {
 //     return view('form');

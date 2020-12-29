@@ -58,7 +58,7 @@
                                     <strong>Rp.{{number_format($pesanan_detail->total_harga)}}</strong>
                                 </td>
                                 <td>
-                                    <i wire:click="destroy({{ $pesanan_detail->id }})" class="fas fa-trash text-danger"></i>
+                                    <i wire:click="destroy({{ $pesanan_detail->id }})" class="fas fa-trash text-danger" style="cursor: pointer;"></i>
                                 </td>
                                 <td></td>
                             </tr>
@@ -66,6 +66,7 @@
                             <tr>
                                 <td align="center" colspan="7">Data Kosong?</td>
                             </tr>
+
                         @endforelse
                         @if (!empty($pesanan))
                             <tr>
@@ -86,7 +87,7 @@
                             <tr>
                                 <td colspan="6"></td>
                                 <td colspan="2">
-                                    <a href="#" class="btn btn-success btn-blok">
+                                    <a href="{{ route('checkout') }}" class="btn btn-success btn-blok">
                                         Check Out
                                     </a>
                                 </td>

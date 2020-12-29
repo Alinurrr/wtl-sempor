@@ -128,7 +128,7 @@
   <!--End Main Layout-->
 
   <!-- Footer -->
-  <footer class="page-footer font-small  darken-4 py-4">
+  <footer class="page-footer font-small  darken-4 py-4" >
 
     <!-- Footer Elements -->
     <div class="container">
