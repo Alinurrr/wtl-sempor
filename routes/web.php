@@ -2,16 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
+Auth::routes();
+
+Route::livewire('/', 'home')->name('home');
+
+Route::livewire('/contact', 'contact-form')->name('contact');
+Route::livewire('/product', 'product-index')->name('product');
+Route::livewire('/product/{id}/{slug}', 'product-detail')->name('product.detail');
+Route::livewire('/products/category/{categoryId}/{slug}', 'product-category')->name('products.category');
+
+// Route::get('/contact', function () {
+//     return view('form');
+// });
+
 
 
 // ######################### ADMINISTRATOR #########################
@@ -74,13 +78,3 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     // user
     Route::get('adm/article/search/article', 'SearchController@article')->name('search-article');
 });
-
-
-
-Auth::routes();
-
-Route::livewire('/', 'home')->name('home');
-
-Route::livewire('/product', 'product-index')->name('product');
-Route::livewire('/products/category/{categoryId}/{slug}', 'product-category')->name('products.category');
-Route::livewire('/product/{id}/{slug}', 'product-detail')->name('product.detail');

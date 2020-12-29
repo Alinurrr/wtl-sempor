@@ -32,6 +32,9 @@
             <li class="nav-item">
             <a class="nav-link {{request()->is('berita*') ? 'active' : ''}}" href="#">Berita</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-link {{request()->is('contact*') ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a>
+            </li>
         </ul>
 
         <!-- Right -->
@@ -53,6 +56,16 @@
 
             @else
 
+                <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                        <i class="fas fa-shopping-cart"></i>
+                        @if ($jumlah_pesanan !== 0)
+                            <span class="badge badge-danger">
+                                {{$jumlah_pesanan}}
+                            </span>
+                        @endif
+                    </a>
+                </li>
 
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

@@ -24,13 +24,13 @@
 
   <!-- livewire -->
    <!-- Scripts -->
-   <script src="{{ mix('js/app.js') }}" ></script>
+   <script src="{{ mix('js/app.js') }}" defer></script>
 
-  <livewire:styles/>
-  <livewire:scripts/>
+  @livewireStyles
 
 
-  <style type="text/css">
+</head>
+  <style>
     .view,
     body,
     html {
@@ -54,7 +54,10 @@
     }
 
     .navbar {
-      background-color: rgba(0, 0, 0, .5);
+      background-color: black;
+      position: relative;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .navbar .navbar-nav .nav-item .nav-link:hover,
@@ -108,9 +111,6 @@
     }
 
   </style>
-
-  @yield('css-after')
-</head>
 
 <body>
     <!-- Start your project here-->
@@ -169,15 +169,18 @@
   <!-- jQuery -->
   {{-- saya disable karena mengganggu livewire --}}
   {{-- <script type="text/javascript" src="{{ asset('fe-wtl/js/jquery.min.js') }}"></script> --}}
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="{{ asset('fe-wtl/js/popper.min.js') }}"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="{{ asset('fe-wtl/js/bootstrap.min.js') }}"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="{{ asset('fe-wtl/js/mdb.min.js') }}"></script>
-  <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+
 
 </body>
+@livewireScripts
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{{ asset('fe-wtl/js/popper.min.js') }}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{{ asset('fe-wtl/js/bootstrap.min.js') }}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{{ asset('fe-wtl/js/mdb.min.js') }}"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
+
 
 </html>
