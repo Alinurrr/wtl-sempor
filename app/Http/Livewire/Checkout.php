@@ -32,7 +32,7 @@ class Checkout extends Component
 
     public function checkout()
     {
-        dd("yo");
+        // dd("yo");
         $attr = $this->validate([
             'no_hp' => 'required',
             'alamat' => 'required'

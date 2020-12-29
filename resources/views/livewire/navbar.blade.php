@@ -76,6 +76,7 @@
                         @if (auth()->user()->level!="user")
                             <a href="{{ route('dashboard') }}" class="dropdown-item">Halaman Dashboard</a>
                         @endif
+                            <a href="{{ route('history') }}" class="dropdown-item">History Pembelian </a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">

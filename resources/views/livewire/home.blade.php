@@ -334,7 +334,7 @@
 
             <!-- Interactions -->
             <div class="text-center my-5">
-                <button class="btn btn-primary"><i class="fas fa-magic mr-1"></i> Lihat Produk Lainnya</button>
+                <a href="{{ route('product') }}" class="btn btn-primary"><i class="fas fa-magic mr-1"></i> Lihat Produk Lainnya</a>
             </div>
             <!-- Interactions -->
 
