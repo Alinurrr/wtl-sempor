@@ -57,7 +57,7 @@
             @else
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link ">
+                    <a href="{{ route('keranjang') }}" class="nav-link {{request()->is('keranjang*') ? 'active' : ''}}">
                         <i class="fas fa-shopping-cart"></i>
                         @if ($jumlah_pesanan !== 0)
                             <span class="badge badge-danger">
