@@ -44,6 +44,11 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     //========================== category ==========================
     Route::get('/adm/product/categories/{category:slug}', 'CategoryController@show');
 
+    //========================== Pesanan ==========================
+    Route::get('/adm/pesanan', 'PesananController@index')->name('pesanan-admin');
+    // update
+    Route::get('/adm/pesanan/{pesanan:kode_pemesanan}/edit', 'PesananController@edit')->name('pesanan-edit');
+    Route::patch('/adm/pesanan/{pesanan:kode_pemesanan}/edit', 'PesananController@update')->name('pesanan-update');
 
     //========================== Auth ==========================
 

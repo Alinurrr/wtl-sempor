@@ -53,9 +53,13 @@
                             </td>
                             <td>
                                 @if($pesanan->status == 1)
-                                Belum Lunas
-                                @else
-                                Lunas
+                                <span class="badge badge-warning">Belum Lunas</span>
+                                @elseif($pesanan->status == 2)
+                                <span class="badge badge-info">Pesanan Diproses</span>
+                                @elseif($pesanan->status == 3)
+                                <span class="badge badge-secondary">Dikirim</span>
+                                @elseif($pesanan->status == 4)
+                                <span class="badge badge-success">Pesanan Sampai</span>
                                 @endif
                             </td>
                             <td><strong>Rp. {{ number_format($pesanan->total_harga + $pesanan->kode_unik) }}</strong></td>
@@ -85,6 +89,8 @@
                             No. Rekening 012345-678-910 atas nama <strong>Muhammad Afifuddin</strong>
                         </div>
                     </div>
+                    <span class="badge badge-warning"><strong>Diharap memperhatikan masing masing pemesanan serta melakukan transfer sesuai total harga</strong> </span>
+
                 </div>
             </div>
         </div>
