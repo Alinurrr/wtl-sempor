@@ -60,7 +60,7 @@
                     </h6>
                     <h3 class="font-weight-bold"><a>{{$article->title}}</a></h3>
                     <!-- Data -->
-                    <p>Written by <a><strong>Ali Nur R</strong></a>, {{$article->created_at->format("D, d/M/Y (H:i:s)")}}</p>
+                    <p>Written by <a><strong>{{$article->author->name}}</strong></a>, {{$article->created_at->format("D, d/M/Y (H:i:s)")}}</p>
                     <!-- Social shares -->
 
 

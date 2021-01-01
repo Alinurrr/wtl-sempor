@@ -28,7 +28,7 @@
             @foreach ($articles as $article)
 
             <div class="col-12 col-md-4 col-lg-4 my-2">
-              <article class="article article-style-c h-100">
+              <div class="article article-style-c h-100 card">
                 <div class="article-header">
                   <img src="/{{$article->thumbnail}}" alt="" style="height: 270px; object-fit: cover; object-position: center;" class="d-flex align-items-center">
                   {{-- <img class="article-image" data-background="/{{$article->thumbnail}}" style="background-image: url(&quot;{{asset('/') . $article->thumbnail}}&quot;);"> --}}
@@ -51,7 +51,7 @@
                   </div>
 
                 </div>
-              </article>
+              </div>
             </div>
 
             @endforeach

@@ -63,7 +63,7 @@
             <!-- Post data -->
             <p>by <a class="font-weight-bold">{{$article->author->name}}</a>, {{$article->created_at->format("d/M/Y ")}}</p>
             <!-- Read more button -->
-            <a class="btn btn-primary btn-md mx-0 btn-rounded">Read more</a>
+            <a href="{{route('article.detail', [$article->id,$article->slug])}}" class="btn btn-primary btn-md mx-0 btn-rounded">Read more</a>
 
             </div>
             <!-- Grid column -->
