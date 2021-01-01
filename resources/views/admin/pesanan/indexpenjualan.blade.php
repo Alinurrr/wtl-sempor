@@ -25,7 +25,7 @@
                   <div class="card-header">
                     <h4>Laporan Penjualan WTL</h4>
                     <div class="ml-auto mr-3">
-                        <a href="{{route('product-create')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-print"></i> Cetak</a>
+                        <a href="{{route('cetakpenjualan-admin')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-print"></i> Cetak</a>
                     </div>
                   </div>
                   <div class="card-body">
@@ -72,15 +72,12 @@
 
 
                             <td>Rp. {{number_format($pesanan->total_harga + $pesanan->kode_unik )}}</td>
-
-
-
-
                           </tr>
-
-
-
                         @endforeach
+                        <tr>
+                            <td colspan="5" align="right"><strong>Total Penjualan : </strong></td>
+                            <td ><strong>Rp.{{number_format($totalJual)}}</strong></td>
+                        </tr>
                         </tbody>
                       </table>
                     </div>

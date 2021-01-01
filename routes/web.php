@@ -57,6 +57,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
 
     //========================== Laporan Penjualan ==========================
     Route::get('/adm/penjualan', 'PesananController@penjualanindex')->name('penjualan-admin');
+    Route::get('/adm/penjualan/cetak_pdf', 'PesananController@cetak_pdf')->name('cetakpenjualan-admin');
 
     //========================== Auth ==========================
 
