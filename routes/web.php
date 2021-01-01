@@ -17,7 +17,7 @@ Route::livewire('/history', 'history')->name('history');
 
 Route::livewire('/article', 'article-index')->name('article');
 Route::livewire('/article/{id}/{slug}', 'article-detail')->name('article.detail');
-Route::livewire('/article/category/{categoryId}/{slug}', 'article-category')->name('article.category');
+Route::livewire('/article/category/{categoryId}/{slug}', 'article-category-filter')->name('article.category');
 // Route::get('/contact', function () {
 //     return view('form');
 // });
