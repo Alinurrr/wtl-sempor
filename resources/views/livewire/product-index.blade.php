@@ -9,8 +9,6 @@
                             <div class="intro-info-content text-center">
                                 <h1 class="display-3 white-text mb-5 wow fadeInDown" data-wow-delay="0.3s">Produk <a class="white-text font-weight-bold">WTL</a></h1>
                                 <h5 class="text-uppercase white-text mb-5 mt-1 font-weight-bold wow fadeInDown" data-wow-delay="0.3s">Lorem ipsum dolor sit amet consectetur. </h5>
-                                <a class="btn btn-light-blue btn-lg wow fadeInDown" data-wow-delay="0.3s">portfolio</a>
-                                <a class="btn btn-indigo btn-lg wow fadeInDown" data-wow-delay="0.3s">About</a>
                             </div>
                         </div>
                     </div>

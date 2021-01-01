@@ -34,7 +34,7 @@
                   {{-- <img class="article-image" data-background="/{{$article->thumbnail}}" style="background-image: url(&quot;{{asset('/') . $article->thumbnail}}&quot;);"> --}}
                 </div>
                 <div class="article-details">
-                  <div class="article-category"><a href="#">{{$article->article_category->name}}</a> <div class="bullet"></div> <a href="#">5 Days</a></div>
+                  <div class="article-category"><a href="#">{{$article->article_category->name}}</a> <div class="bullet"></div> <a href="#">{{$article->created_at->diffForHumans()}}</a></div>
                   <div class="article-title">
                     <h2><a href="/adm/article/{{$article->slug}}">{{$article->title}}</a></h2>
                   </div>
