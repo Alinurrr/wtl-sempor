@@ -18,11 +18,15 @@
 
 
 
+
             <div class="row mt-4">
               <div class="col-12">
                 <div class="card">
                   <div class="card-header">
-                    <h4>WTL Pesanan</h4>
+                    <h4>Laporan Penjualan WTL</h4>
+                    <div class="ml-auto mr-3">
+                        <a href="{{route('product-create')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-print"></i> Cetak</a>
+                    </div>
                   </div>
                   <div class="card-body">
                     <div class="table-responsive">
@@ -32,12 +36,11 @@
                             <th class="text-center">
                               #
                             </th>
+                            <th>Kode Pemesanan</th>
                             <th>waktu</th>
                             <th>User</th>
-                            <th>Kode Pemesanan</th>
-                            <th>kode Unik</th>
-                            <th>Status</th>
-                            <th>Action</th>
+                            <th>Barang</th>
+                            <th>Sub Total</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -53,45 +56,26 @@
                             <td>
                               {{$no}}
                             </td>
+                            <td>{{$pesanan->kode_pemesanan}}</td>
 
                             <td>{{$pesanan->created_at->format("D, d/M/Y")}}</td>
 
                             <td>{{$pesanan->user->name}}</td>
 
-                            <td>{{$pesanan->kode_pemesanan}}</td>
-
-
-                            <td>{{$pesanan->kode_unik}}</td>
-
-
-
                             <td>
-                                @if ($pesanan->status == 0 )
-                                <span class="badge badge-light">Kerangjang</span>
-                                @elseif($pesanan->status == 1)
-                                <span class="badge badge-info">Belum Dibayar</span>
-                                @elseif($pesanan->status == 2)
-                                <span class="badge badge-warning">Pesanan Proses</span>
-                                @elseif($pesanan->status == 3)
-                                <span class="badge badge-secondary">Pesanan Kirim</span>
-                                @elseif($pesanan->status == 4)
-                                <span class="badge badge-success">Done :)</span>
-                                @endif
+                                <?php $pesanan_details = \App\PesananDetail::where('pesanan_id', $pesanan->id)->get(); ?>
+                                @foreach ($pesanan_details as $pesanan_detail)
+                                {{ $pesanan_detail->product->judul }} || Rp.{{ number_format($pesanan_detail->product->harga)}}
+                                <br>
+                                @endforeach
                             </td>
 
 
+                            <td>Rp. {{number_format($pesanan->total_harga + $pesanan->kode_unik )}}</td>
 
-                            <td>
-                                    <a href="{{ route('pesanan-edit', $pesanan->kode_pemesanan) }}" class="btn btn-icon btn-info"><i class="fas fa-info-circle"></i></a>
-                                    {{-- @can('update', $product)
-                                    <form action="/adm/product/{{$product->slug}}/delete" method="POST" class="d-inline" onsubmit="return confirm('Yakin mau dihapus ?')">
-                                        @csrf
-                                        @method("delete")
 
-                                            <button type="submit" class="btn btn-icon btn-danger"><i class="fas fa-trash-alt"></i></i></button>
-                                    </form>
-                                    @endcan --}}
-                            </td>
+
+
                           </tr>
 
 

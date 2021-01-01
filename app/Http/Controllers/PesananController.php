@@ -17,6 +17,15 @@ class PesananController extends Controller
         ]);
     }
 
+    public function penjualanindex()
+    {
+        $pesanans = Pesanan::latest()->paginate(40)->where('status', "4");
+        return view('admin.pesanan.indexpenjualan', [
+            'pesanans' => $pesanans,
+
+        ]);
+    }
+
     public function edit(Pesanan $pesanan)
     {
         return view('admin.pesanan.edit', [

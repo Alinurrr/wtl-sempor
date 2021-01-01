@@ -18,6 +18,7 @@
           <li class="{{request()->is('adm/product*') ? 'active' : ''}}"><a class="nav-link" href="{{route('product-admin')}}"><i class="fas fa-swatchbook"></i> <span>Produk</span></a></li>
           <li class="{{request()->is('adm/pesanan*') ? 'active' : ''}}"><a class="nav-link" href="{{route('pesanan-admin')}}"><i class="fas fa-handshake"></i> <span>Pesanan</span></a></li>
           <li class="{{request()->is('adm/article*') ? 'active' : ''}}"><a class="nav-link" href="{{route('article-admin')}}"><i class="far fa-file-alt"></i> <span>Artikel</span></a></li>
+          <li class="{{request()->is('adm/penjualan*') ? 'active' : ''}}"><a class="nav-link" href="{{route('penjualan-admin')}}"><i class="fas fa-book"></i> <span>Laporan Penjualan</span></a></li>
           {{-- <li class="{{request()->is('adm/contact') ? 'active' : ''}}"><a class="nav-link" href="{{route('contact-index')}}"><i class="far fa-envelope"></i> <span>Pesan</span></a></li> --}}
 
         </ul>

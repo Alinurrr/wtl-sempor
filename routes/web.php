@@ -55,6 +55,9 @@ Route::group(['middleware' => ['auth', 'ceklevel:master,admin']], function () {
     Route::get('/adm/pesanan/{pesanan:kode_pemesanan}/edit', 'PesananController@edit')->name('pesanan-edit');
     Route::patch('/adm/pesanan/{pesanan:kode_pemesanan}/edit', 'PesananController@update')->name('pesanan-update');
 
+    //========================== Laporan Penjualan ==========================
+    Route::get('/adm/penjualan', 'PesananController@penjualanindex')->name('penjualan-admin');
+
     //========================== Auth ==========================
 
     Route::get('/adm/user', 'UserController@index')->name('user-admin');
