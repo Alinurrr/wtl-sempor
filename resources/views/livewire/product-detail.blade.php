@@ -52,7 +52,7 @@
 
               <h3 class="h3-responsive text-md-left mb-4 ml-xl-0 ml-4">
                 <span class="red-text font-weight-bold">
-                  <strong>Rp. {{$product->harga}}</strong>
+                  <strong>Rp. {{number_format($product->harga)}}</strong>
                 </span>
                 {{-- <span class="grey-text">
                   <small>

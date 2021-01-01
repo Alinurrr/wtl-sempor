@@ -24,7 +24,7 @@
             </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link {{request()->is('about*') ? 'active' : ''}}" href="#">About</a>
+            <a class="nav-link {{request()->is('about*') ? 'active' : ''}}" href="{{ route('about', ['id'=>1]) }}">About</a>
             </li>
             <li class="nav-item">
             <a class="nav-link {{request()->is('product*') ? 'active' : ''}}" href="{{ route('product') }}">Produk</a>
@@ -32,9 +32,9 @@
             <li class="nav-item">
             <a class="nav-link {{request()->is('article*') ? 'active' : ''}}" href="{{ route('article') }}">Berita</a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
             <a class="nav-link {{request()->is('contact*') ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a>
-            </li>
+            </li> --}}
         </ul>
 
         <!-- Right -->

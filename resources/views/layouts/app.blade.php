@@ -131,40 +131,42 @@
   </main>
   <!--End Main Layout-->
 
+
+  </footer>
   <!-- Footer -->
-  <footer class="page-footer font-small  darken-4 py-4" >
+
+  <!-- Footer -->
+    <footer class="page-footer font-small darken-4 pt-4">
 
     <!-- Footer Elements -->
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-6 d-flex justify-content-start">
-          <!-- Copyright -->
-          <div class="footer-copyright text-center bg-transparent">© 2019 Copyright:
-            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+      <!--Grid row-->
+      <div class="row d-flex justify-content-center">
+
+        <!--Grid column-->
+        <div class="col-md-6">
+
+          <!-- Video -->
+          <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B3JbBmsSLTE"
+              allowfullscreen></iframe>
           </div>
-          <!-- Copyright -->
+
         </div>
-        <div class="col-md-6 d-flex justify-content-end">
-          <ul class="list-unstyled d-flex mb-0">
-            <li>
-              <a class="mr-3" role="button"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li>
-              <a class="mr-3" role="button"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a class="mr-3" role="button"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li>
-              <a class="" role="button"><i class="fab fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
+        <!--Grid column-->
+
       </div>
+      <!--Grid row-->
 
     </div>
     <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
 
   </footer>
   <!-- Footer -->

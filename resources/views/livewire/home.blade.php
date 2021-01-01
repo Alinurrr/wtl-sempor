@@ -53,21 +53,15 @@
                             <i class="fab fa-twitter fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
                             <!-- Google +-->
-                            <a class="gplus-ic">
-                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5  mr-2"> </i>
+                            <a href="https://www.youtube.com/channel/UC_oMokM097OgUANC5vsParw" target="_blank" class="gplus-ic">
+                            <i class="fab fa-youtube fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
-                            <!--Linkedin -->
-                            <a class="li-ic">
-                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5  mr-2"> </i>
-                            </a>
+
                             <!--Instagram-->
-                            <a class="ins-ic">
+                            <a href="https://www.instagram.com/semporwtl/" target="_blank" class="ins-ic">
                             <i class="fab fa-instagram fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
-                            <!--Pinterest-->
-                            <a class="pin-ic">
-                            <i class="fab fa-pinterest fa-lg white-text"> </i>
-                            </a>
+
                         </div>
                         </div>
                         <!-- Grid column -->
@@ -123,21 +117,15 @@
                             <i class="fab fa-twitter fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
                             <!-- Google +-->
-                            <a class="gplus-ic">
-                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5  mr-2"> </i>
+                            <a href="https://www.youtube.com/channel/UC_oMokM097OgUANC5vsParw" target="_blank" class="gplus-ic">
+                            <i class="fab fa-youtube fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
-                            <!--Linkedin -->
-                            <a class="li-ic">
-                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5  mr-2"> </i>
-                            </a>
+
                             <!--Instagram-->
-                            <a class="ins-ic">
+                            <a href="https://www.instagram.com/semporwtl/" target="_blank" class="ins-ic">
                             <i class="fab fa-instagram fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
-                            <!--Pinterest-->
-                            <a class="pin-ic">
-                            <i class="fab fa-pinterest fa-lg white-text"> </i>
-                            </a>
+
                         </div>
                         </div>
                         <!-- Grid column -->
@@ -194,21 +182,15 @@
                             <i class="fab fa-twitter fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
                             <!-- Google +-->
-                            <a class="gplus-ic">
-                            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5  mr-2"> </i>
+                            <a href="https://www.youtube.com/channel/UC_oMokM097OgUANC5vsParw" target="_blank" class="gplus-ic">
+                            <i class="fab fa-youtube fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
-                            <!--Linkedin -->
-                            <a class="li-ic">
-                            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5  mr-2"> </i>
-                            </a>
+
                             <!--Instagram-->
-                            <a class="ins-ic">
+                            <a href="https://www.instagram.com/semporwtl/" target="_blank" class="ins-ic">
                             <i class="fab fa-instagram fa-lg white-text mr-md-5  mr-2"> </i>
                             </a>
-                            <!--Pinterest-->
-                            <a class="pin-ic">
-                            <i class="fab fa-pinterest fa-lg white-text"> </i>
-                            </a>
+
                         </div>
                         </div>
                         <!-- Grid column -->
@@ -350,28 +332,28 @@
         <div class="container pt-5 my-5 z-depth-1">
             <section class="p-md-3 mx-md-5 text-lg-left">
                 <div class="row d-flex justify-content-center">
-                <h2 class="font-weight-bold pb-4">Features</h2>
+                <h2 class="font-weight-bold pb-4">Fasilitas WTL</h2>
                 </div>
                 <div class="row text-center d-flex justify-content-center mt-4">
                 <div class="col-lg-4 col-md-6 mb-5">
-                    <i class="far fa-chart-bar indigo-text fa-3x mb-4"></i>
-                    <h4 class="font-weight-bold mb-4">Feature 1</h4>
+                    <i class="fas fa-utensils indigo-text fa-3x mb-4"></i>
+                    <h4 class="font-weight-bold mb-4">WTL Caffe</h4>
                     <p class="text-muted px-2 mb-lg-0">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
-                    <i class="fa fa-home pink-text fa-3x mb-4"></i>
-                    <h4 class="font-weight-bold mb-4">Feature 2</h4>
+                    <i class="fas fa-truck pink-text fa-3x mb-4"></i>
+                    <h4 class="font-weight-bold mb-4">Keodya Craft</h4>
                     <p class="text-muted px-2 mb-lg-0">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
-                    <i class="fa fa-plane blue-text fa-3x mb-4"></i>
-                    <h4 class="font-weight-bold mb-4">Feature 3</h4>
+                    <i class="fas fa-coffee blue-text fa-3x mb-4"></i>
+                    <h4 class="font-weight-bold mb-4">Camp Coffe WTL</h4>
                     <p class="text-muted px-2 mb-md-0">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -401,7 +383,7 @@
                 <!--Grid column-->
                 <div class="col-md-12 mb-4">
                 <div class="card card-image"
-                    style="background-image: url('https://mdbootstrap.com/img/Photos/Others/slide%20(31).jpg');">
+                    style="background-image: url('https://mdbootstrap.com/img/new/standard/city/042.jpg');">
                     <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                     <div>
                         <a href="" class="green-text">
@@ -414,7 +396,7 @@
                         </h3>
                         <p>{!!Str::limit($news[0]->body, 300)!!}</p>
 
-                        <a class="btn btn-success btn-sm">
+                        <a href="{{route('article.detail', [$news[0]->id,$news[0]->slug])}}" class="btn btn-success btn-sm">
                         <i class="fas fa-clone left"></i> Baca Berita</a>
                     </div>
                     </div>
@@ -425,7 +407,7 @@
                 <!--Grid column-->
                 <div class="col-md-6 mb-4">
                 <div class="card card-image"
-                    style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(60).jpg');">
+                    style="background-image: url('https://mdbootstrap.com/img/new/standard/city/042.jpg');">
                     <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                     <div>
                         <a href="" class="green-text">
@@ -436,7 +418,7 @@
                         <strong>{{$news[1]->title}}</strong>
                         </h3>
                         <p>{!!Str::limit($news[1]->body, 150)!!}</p>
-                        <a class="btn btn-success btn-sm">
+                        <a href="{{route('article.detail', [$news[1]->id,$news[1]->slug])}}" class="btn btn-success btn-sm">
                         <i class="fas fa-clone left"></i> Baca Berita</a>
                     </div>
                     </div>
@@ -447,7 +429,7 @@
                 <!--Grid column-->
                 <div class="col-md-6 mb-4">
                 <div class="card card-image"
-                    style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(58).jpg');">
+                    style="background-image: url('https://mdbootstrap.com/img/new/standard/city/042.jpg');">
                     <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                     <div>
                         <a href="" class="green-text">
@@ -458,7 +440,7 @@
                         <strong>{{$news[2]->title}}</strong>
                         </h3>
                         <p>{!!Str::limit($news[2]->body, 150)!!}</p>
-                        <a class="btn btn-success btn-sm">
+                        <a href="{{route('article.detail', [$news[2]->id,$news[2]->slug])}}" class="btn btn-success btn-sm">
                         <i class="fas fa-clone left"></i> Baca Berita</a>
                     </div>
                     </div>

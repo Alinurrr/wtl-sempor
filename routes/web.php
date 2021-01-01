@@ -15,6 +15,8 @@ Route::livewire('/keranjang', 'keranjang')->name('keranjang');
 Route::livewire('/checkout', 'checkout')->name('checkout');
 Route::livewire('/history', 'history')->name('history');
 
+Route::livewire('/about', 'about')->name('about');
+
 Route::livewire('/article', 'article-index')->name('article');
 Route::livewire('/article/{id}/{slug}', 'article-detail')->name('article.detail');
 Route::livewire('/article/category/{categoryId}/{slug}', 'article-category-filter')->name('article.category');
