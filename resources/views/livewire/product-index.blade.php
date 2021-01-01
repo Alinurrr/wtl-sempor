@@ -33,8 +33,15 @@
         </div>
     </div>
     <div class="container">
+
         <div class="row">
             <div class="col-12 col-sm-3">
+                <div class="input-group mb-3">
+                    <input wire:model="search" type="text" class="form-control" placeholder="Search Product" aria-label="Search" aria-describedby="basic-addon1">
+                    <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                </div>
                 <div class="card bg-light mb-3">
                     <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-list"></i> Categories</div>
                     <ul class="list-group category_block">
@@ -87,8 +94,14 @@
 
                 @endforeach
 
+
             </div>
             <!-- Grid row -->
+            <div class="row">
+                <div class="col">
+                    {{$products->links()}}
+                </div>
+            </div>
             </div>
 
         </div>
