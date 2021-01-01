@@ -404,20 +404,18 @@
                     style="background-image: url('https://mdbootstrap.com/img/Photos/Others/slide%20(31).jpg');">
                     <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                     <div>
-                        <a href="" class="purple-text">
+                        <a href="" class="green-text">
                         <h5>
-                            <i class="fas fa-plane pr-2"></i>Fashion week</h5>
+
+                            <i class="fas fa-plane pr-2"></i>{{$news[0]->article_category->name}}</h5>
                         </a>
                         <h3 class="mb-4 mt-4">
-                        <strong>Project title</strong>
+                        <strong>{{$news[0]->title}}</strong>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quod minima assumenda qui
-                        mollitia
-                        architecto soluta at ipsa itaque nam, aliquam minus odit expedita voluptatibus fugiat amet, nostrum
-                        error
-                        dolorum!.</p>
-                        <a class="btn btn-secondary btn-sm">
-                        <i class="fas fa-clone left"></i> View project</a>
+                        <p>{!!Str::limit($news[0]->body, 300)!!}</p>
+
+                        <a class="btn btn-success btn-sm">
+                        <i class="fas fa-clone left"></i> Baca Berita</a>
                     </div>
                     </div>
                 </div>
@@ -430,18 +428,16 @@
                     style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(60).jpg');">
                     <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                     <div>
-                        <a href="" class="pink-text">
+                        <a href="" class="green-text">
                         <h5>
-                            <i class="fas fa-camera pr-2"></i>Street style</h5>
+                            <i class="fas fa-plane pr-2"></i>{{$news[1]->article_category->name}}</h5>
                         </a>
                         <h3 class="mb-4 mt-4">
-                        <strong>Project title</strong>
+                        <strong>{{$news[1]->title}}</strong>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-                        optio
-                        vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.</p>
-                        <a class="btn btn-pink btn-sm">
-                        <i class="fas fa-clone left"></i> View project</a>
+                        <p>{!!Str::limit($news[1]->body, 150)!!}</p>
+                        <a class="btn btn-success btn-sm">
+                        <i class="fas fa-clone left"></i> Baca Berita</a>
                     </div>
                     </div>
                 </div>
@@ -456,16 +452,14 @@
                     <div>
                         <a href="" class="green-text">
                         <h5>
-                            <i class="fas fa-eye pr-2"></i>Summer trends</h5>
+                            <i class="fas fa-plane pr-2"></i>{{$news[2]->article_category->name}}</h5>
                         </a>
                         <h3 class="mb-4 mt-4">
-                        <strong>Project title</strong>
+                        <strong>{{$news[2]->title}}</strong>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
-                        optio
-                        vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.</p>
+                        <p>{!!Str::limit($news[2]->body, 150)!!}</p>
                         <a class="btn btn-success btn-sm">
-                        <i class="fas fa-clone left"></i> View project</a>
+                        <i class="fas fa-clone left"></i> Baca Berita</a>
                     </div>
                     </div>
                 </div>

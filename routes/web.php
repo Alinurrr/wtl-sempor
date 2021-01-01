@@ -15,6 +15,7 @@ Route::livewire('/keranjang', 'keranjang')->name('keranjang');
 Route::livewire('/checkout', 'checkout')->name('checkout');
 Route::livewire('/history', 'history')->name('history');
 
+Route::livewire('/article', 'article-index')->name('article');
 // Route::get('/contact', function () {
 //     return view('form');
 // });

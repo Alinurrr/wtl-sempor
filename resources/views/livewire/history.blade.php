@@ -89,7 +89,7 @@
                             No. Rekening 012345-678-910 atas nama <strong>Muhammad Afifuddin</strong>
                         </div>
                     </div>
-                    <span class="badge badge-warning"><strong>Diharap memperhatikan masing masing pemesanan serta melakukan transfer sesuai total harga</strong> </span>
+                    <span class="badge badge-warning"><strong>Diharap memperhatikan masing masing pemesanan serta melakukan transfer sesuai` total harga</strong> </span>
 
                 </div>
             </div>
