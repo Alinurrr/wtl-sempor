@@ -30,7 +30,7 @@
             <a class="nav-link {{request()->is('product*') ? 'active' : ''}}" href="{{ route('product') }}">Produk</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link {{request()->is('berita*') ? 'active' : ''}}" href="{{ route('article') }}">Berita</a>
+            <a class="nav-link {{request()->is('article*') ? 'active' : ''}}" href="{{ route('article') }}">Berita</a>
             </li>
             <li class="nav-item">
             <a class="nav-link {{request()->is('contact*') ? 'active' : ''}}" href="{{ route('contact') }}">Contact</a>
